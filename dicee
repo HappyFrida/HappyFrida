@@ -1,34 +1,24 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Dicee</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+var randomNumber1 = Math.floor(Math.random() * 6) + 1;
 
-  </head>
-  <body>
+var imageAddress1 = "../Dicee Challenge - Starting Files/images/dice" + randomNumber1 + ".png";
 
-    <div class="container">
-      <h1>Refresh Me</h1>
+document.querySelector('.img1').setAttribute("src",imageAddress1);
 
-      <div class="dice">
-        <p>Player 1</p>
-        <img class="img1" src="../Dicee Challenge - Starting Files/images/dice6.png">
-      </div>
 
-      <div class="dice">
-        <p>Player 2</p>
-        <img class="img2" src="../Dicee Challenge - Starting Files/images/dice6.png">
-      </div>
+var randomNumber2 = Math.floor(Math.random() * 6) + 1;
 
-    </div>
+var imageAddress2 = "../Dicee Challenge - Starting Files/images/dice" + randomNumber2 + ".png";
 
-    <script src="../Dicee Challenge - Starting Files/index.js"></script>
+document.querySelector('.img2').setAttribute("src",imageAddress2);
 
-  </body>
 
-  <footer>
-    www 🎲 App Brewery 🎲 com
-  </footer>
-</html>
+if(imageAddress1 > imageAddress2){
+    document.querySelector("h1").innerHTML = "Player 1 Wins";
+
+} else if (imageAddress2 > imageAddress1){
+    document.querySelector("h1").innerHTML = "Player 2 Wins";
+
+}else {
+    document.querySelector("h1").innerHTML = "Draw";
+
+} 
